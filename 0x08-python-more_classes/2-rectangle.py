@@ -24,9 +24,6 @@ class Rectangle:
 
         """
 
-        self.__check_valid_width(width)
-        self.__check_valid_height(height)
-
         self.width = width
         self.height = height
 
@@ -162,3 +159,30 @@ class Rectangle:
             return True
 
         return False
+
+    def area(self):
+        """
+
+        Computes the area of a Rectangle.
+
+        Returns:
+            int: The area of a Rectangle.
+
+        """
+
+        return self.__width * self.__height
+
+    def perimeter(self):
+        """
+
+        Computes the perimeter of a Rectangle.
+
+        Returns:
+            int: The perimeter of a Rectangle.
+
+        """
+
+        if self.__width == 0 or self.__height == 0:
+            return 0
+
+        return self.__width * 2 + self.__height * 2
