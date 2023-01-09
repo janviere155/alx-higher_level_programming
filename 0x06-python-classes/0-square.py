@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-"""Square Class
 
-This class don't do anything for the moment
-
-"""
+"""Module that contains the class Square.
+An empty class."""
 
 
 class Square:
+    """It takes and pass nothing"""
     pass
