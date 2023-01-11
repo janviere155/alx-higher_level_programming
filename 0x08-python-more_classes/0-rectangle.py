@@ -1,8 +1,16 @@
 #!/usr/bin/python3
-"""class module defining an empty block of the class."""
+"""
+
+A module with a Rectangle that does nothing
+
+"""
 
 
 class Rectangle:
-    """Definition of ``Rectangle`` class.
     """
+
+    An empty Rectangle class
+
+    """
+
     pass

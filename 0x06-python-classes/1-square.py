@@ -14,6 +14,6 @@ class Square:
         Initialize the attributes of the ``Square`` class.
 
         Args:
-             size (int): first parameter. Defines the size of the Square
+            size (int): first parameter. Defines the size of the Square
         """
-       self.__size = size 
+        self.__size = size

@@ -18,7 +18,7 @@ class Square:
                 raise ValueError('size must be >= 0')
         else:
             raise TypeError('size must be an integer')
-    
+
     @property
     def size(self):
         """``size`` property.
@@ -60,4 +60,3 @@ class Square:
             for j in range(self.__size):
                 print("#", end="")
             print()
-
