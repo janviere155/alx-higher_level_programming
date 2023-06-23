@@ -1,36 +1,23 @@
 #!/usr/bin/python3
-"""
-A integer validator module
-"""
+"""Module to modify the base_geometry class"""
 
 
 class BaseGeometry:
-    """
-    A super class to implements geometrical shapes
-    """
-
+    """BaseGeometry class definition"""
     def area(self):
-        """
-        Raises an exception when you call this function
-        """
-
-        raise Exception('area() is not implemented')
+        """Raise an exception"""
+        raise Exception("area() is not implemented")
 
     def integer_validator(self, name, value):
-        """
-        Checks a integer value
-
+        """Validate if ``value`` is an integer.
         Args:
-            name (str): The name of the value.
-            value (int): The value.
-
+            name (str): parameter name
+            value (int): integer value
         Raises:
-            TypeError: If `value` isn't a integer.
-            ValueError: If `value` is less than or equal to zero.
+            TypeError: if not an integer
+            ValueError: if value <= 0
         """
-
-        if type(value) is not int:
-            raise TypeError(name + ' must be an integer')
-
+        if type(value) != int:
+            raise TypeError("{} must be an integer".format(name))
         if value <= 0:
-            raise ValueError(name + ' must be greater than 0')
+            raise ValueError("{} must be greater than 0".format(name))

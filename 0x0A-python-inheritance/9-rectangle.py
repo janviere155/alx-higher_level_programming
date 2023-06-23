@@ -1,17 +1,24 @@
 #!/usr/bin/python3
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
+"""Class ``Rectangle`` inherits the ``BaseGeometry`` class."""
 
 
-class Rectangle(BaseGeometry):
+base_g = __import__('7-base_geometry')
+
+
+class Rectangle(base_g.BaseGeometry):
+    """Class Definition"""
+
     def __init__(self, width, height):
-        self.integer_validator("width", width)
-        self.integer_validator("height", height)
-
+        """Initialize the attributes"""
+        super().integer_validator("width", width)
+        super().integer_validator("height", height)
         self.__width = width
         self.__height = height
 
-    def area(self):
-        return self.__width * self.__height
-
     def __str__(self):
-        return '[Rectangle] ' + str(self.__width) + '/' + str(self.__height)
+        """String representation"""
+        return f"[Rectangle] {self.__width}/{self.__height}"
+
+    def area(self):
+        """Compute the area of the rectangle"""
+        return self.__width * self.__height

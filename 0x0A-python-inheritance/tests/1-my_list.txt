@@ -1,114 +1,29 @@
-===============================
-1. Print sorted module
-===============================
-
-Import module:
-==============
-    >>> MyList = __import__('1-my_list').MyList
+Test for 1-my_list.py
 
 
-Function:
-=========
-Write a class MyList that inherits from list:
+>>> print(__import__("1-my_list").__doc__)
+Module containing the ``MyList`` class definition.
 
-    * You can assume that all the elements of the list will be of type int
+>>> print(__import__("1-my_list").MyList.__doc__)
+``MyList`` class definition
 
-Section // No exceptions
-=========================
+>>> print(__import__("1-my_list").MyList.print_sorted.__doc__)
+prints out the content of the list in a sorted order.
 
-Test case #0: A test case to order a disordered list of positive integers
+Importing MyList class:
+>>> MyList = __import__("1-my_list").MyList
 
-    >>> my_list = MyList()
-    >>> my_list.append(1)
-    >>> my_list.append(4)
-    >>> my_list.append(2)
-    >>> my_list.append(3)
-    >>> my_list.append(5)
-    >>> print(my_list)
-    [1, 4, 2, 3, 5]
+Test case #1
+>>> new_list = MyList()
+>>> new_list.append(1)
+>>> new_list.append(4)
+>>> new_list.append(2)
+>>> new_list.append(3)
+>>> new_list.append(5)
+>>> new_list.print_sorted()
+[1, 2, 3, 4, 5]
 
-    >>> my_list.print_sorted()
-    [1, 2, 3, 4, 5]
-
-    >>> print(my_list)
-    [1, 4, 2, 3, 5]
-
-Test case #1: A test case to order a disordered list of positive integers
-
-    >>> my_list = MyList()
-    >>> my_list.append(5)
-    >>> my_list.append(4)
-    >>> my_list.append(3)
-    >>> my_list.append(2)
-    >>> my_list.append(1)
-    >>> print(my_list)
-    [5, 4, 3, 2, 1]
-
-    >>> my_list.print_sorted()
-    [1, 2, 3, 4, 5]
-
-    >>> print(my_list)
-    [5, 4, 3, 2, 1]
-
-Test case #2: A test case for a empty list
-
-    >>> my_list = MyList()
-    >>> print(my_list)
-    []
-
-    >>> my_list.print_sorted()
-    []
-
-    >>> print(my_list)
-    []
-
-Test case #3: A test case for do nothing
-
-    >>> my_list = MyList()
-    >>> my_list.append(-5)
-    >>> my_list.append(-4)
-    >>> my_list.append(-3)
-    >>> my_list.append(-2)
-    >>> my_list.append(-1)
-    >>> print(my_list)
-    [-5, -4, -3, -2, -1]
-
-    >>> my_list.print_sorted()
-    [-5, -4, -3, -2, -1]
-
-    >>> print(my_list)
-    [-5, -4, -3, -2, -1]
-
-Test case #4: A test case to order a disordered list of negative integers
-
-    >>> my_list = MyList()
-    >>> my_list.append(-1)
-    >>> my_list.append(-4)
-    >>> my_list.append(-2)
-    >>> my_list.append(-3)
-    >>> my_list.append(-5)
-    >>> print(my_list)
-    [-1, -4, -2, -3, -5]
-
-    >>> my_list.print_sorted()
-    [-5, -4, -3, -2, -1]
-
-    >>> print(my_list)
-    [-1, -4, -2, -3, -5]
-
-
-Section // Attribute Errors
-============================
-
-Test case #5: A invalid test case of tuples
-
-    >>> my_list = (1, 2)
-    >>> print(my_list)
-    (1, 2)
-    
-    >>> my_list.print_sorted()
-    Traceback (most recent call last):
-    AttributeError: 'tuple' object has no attribute 'print_sorted'
-
-    >>> print(my_list)
-    (1, 2)
+Test case #2
+>>> new_list2 = MyList()
+>>> new_list2.print_sorted()
+[]
